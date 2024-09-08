@@ -40,14 +40,14 @@
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #f9c74f; /* Golden hue */
             animation: fadeIn 2s ease;
             text-shadow: 2px 2px 4px #000;
         }
 
         h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #f9844a;
             margin-bottom: 20px;
             text-shadow: 1px 1px 3px #000;
@@ -57,7 +57,7 @@
         .video-container, .image-container {
             display: flex;
             justify-content: center;
-            margin: 120px 20px 20px; /* Adjusted margin to accommodate fixed headings */
+            margin: 100px 20px 20px; /* Adjusted margin to accommodate fixed headings */
             animation: zoomIn 2s ease, fadeIn 2s ease; /* Apply animations */
         }
 
@@ -68,13 +68,13 @@
         }
 
         .image-container img {
-            width: 60%; /* Adjusted width */
-            max-width: 400px; /* Adjusted maximum size */
+            width: 80%; /* Adjusted width */
+            max-width: 300px; /* Adjusted maximum size */
         }
 
         .video-container iframe {
-            width: 80%; /* Adjusted width */
-            max-width: 800px; /* Adjusted maximum size */
+            width: 90%; /* Adjusted width */
+            max-width: 360px; /* Adjusted maximum size */
         }
 
         /* Keyframe Animations */
@@ -91,11 +91,11 @@
         /* Media Queries for Responsiveness */
         @media only screen and (max-width: 768px) {
             h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             h3 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .image-container img, .video-container iframe {
@@ -105,15 +105,16 @@
 
         @media only screen and (max-width: 480px) {
             h2 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             h3 {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
 
             .image-container img, .video-container iframe {
                 width: 100%;
+                max-width: none; /* Remove max-width for small devices */
             }
         }
     </style>
@@ -124,7 +125,7 @@
         <h3>ಕನಕ ಕುಟೀರಕ್ಕೆ ದಾರಿ</h3>
     </div>
     <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/y-x2BLPyWGk" title="Directions to KANAKA Kuteera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/y-x2BLPyWGk" title="Directions to KANAKA Kuteera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="image-container">
         <img src="hom.png" alt="Directions to KANAKA Kuteera">
