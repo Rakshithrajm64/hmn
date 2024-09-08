@@ -22,21 +22,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             color: #fff;
             padding: 20px;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .fixed-header {
             position: fixed;
-            top: 20px; /* Distance from the top of the viewport */
+            top: 0; /* Align to the top */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
             z-index: 10; /* Ensure headings are on top of other elements */
             width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Add background to improve readability */
+            padding: 10px 0;
         }
 
         h2 {
@@ -54,10 +56,20 @@
             animation: fadeIn 2s ease, zoomIn 2s ease; /* Apply animations */
         }
 
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px; /* Add margin-top to account for fixed header */
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
         .video-container, .image-container {
             display: flex;
             justify-content: center;
-            margin: 100px 20px 20px; /* Adjusted margin to accommodate fixed headings */
+            margin: 20px;
             animation: zoomIn 2s ease, fadeIn 2s ease; /* Apply animations */
         }
 
@@ -121,14 +133,16 @@
 </head>
 <body>
     <div class="fixed-header">
-        <h2> ನಮ್ಮ ಮನೆಯ ಗೃಹಪ್ರವೇಶಕ್ಕೆ ಸ್ವಾಗತ</h2>
+        <h2> ನಮ್ಮ家的 ಗೃಹಪ್ರವೇಶಕ್ಕೆ ಸ್ವಾಗತ</h2>
         <h3>ಕನಕ ಕುಟೀರಕ್ಕೆ ದಾರಿ</h3>
     </div>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/y-x2BLPyWGk" title="Directions to KANAKA Kuteera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="image-container">
-        <img src="hom.png" alt="Directions to KANAKA Kuteera">
+    <div class="content">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/y-x2BLPyWGk" title="Directions to KANAKA Kuteera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="image-container">
+            <img src="hom.png" alt="Directions to KANAKA Kuteera">
+        </div>
     </div>
 </body>
 </html>
