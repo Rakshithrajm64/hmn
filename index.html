@@ -20,33 +20,23 @@
             background-position: center; /* Center the background image */
             background-attachment: fixed; /* Keeps the background fixed */
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
             height: 100vh;
             color: #fff;
-            text-align: center;
             padding: 20px;
             position: relative;
+            overflow: hidden;
         }
 
-        .corner-image {
-            position: absolute;
-            width: 10vw; /* Relative size to viewport width */
-            max-width: 120px; /* Maximum size */
-            height: auto;
-            z-index: 1;
-            animation: fadeIn 2s ease, zoomIn 2s ease; /* Apply animations */
-        }
-
-        .top-left {
-            top: 10px;
-            left: 10px;
-        }
-
-        .top-right {
-            top: 10px;
-            right: 10px;
+        .fixed-header {
+            position: fixed;
+            top: 20px; /* Distance from the top of the viewport */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 10; /* Ensure headings are on top of other elements */
+            width: 100%;
         }
 
         h2 {
@@ -67,7 +57,7 @@
         .video-container, .image-container {
             display: flex;
             justify-content: center;
-            margin: 20px;
+            margin: 120px 20px 20px; /* Adjusted margin to accommodate fixed headings */
             animation: zoomIn 2s ease, fadeIn 2s ease; /* Apply animations */
         }
 
@@ -111,11 +101,6 @@
             .image-container img, .video-container iframe {
                 width: 90%;
             }
-
-            .corner-image {
-                width: 12vw; /* Adjust size for tablets */
-                max-width: 100px; /* Adjust maximum size */
-            }
         }
 
         @media only screen and (max-width: 480px) {
@@ -130,17 +115,14 @@
             .image-container img, .video-container iframe {
                 width: 100%;
             }
-
-            .corner-image {
-                width: 15vw; /* Adjust size for mobile devices */
-                max-width: 80px; /* Adjust maximum size */
-            }
         }
     </style>
 </head>
 <body>
-    <h2> ನಮ್ಮ ಮನೆಯ ಗೃಹಪ್ರವೇಶಕ್ಕೆ ಸ್ವಾಗತ</h2>
-    <h3>ಕನಕ ಕುಟೀರಕ್ಕೆ ದಾರಿ</h3>
+    <div class="fixed-header">
+        <h2> ನಮ್ಮ ಮನೆಯ ಗೃಹಪ್ರವೇಶಕ್ಕೆ ಸ್ವಾಗತ</h2>
+        <h3>ಕನಕ ಕುಟೀರಕ್ಕೆ ದಾರಿ</h3>
+    </div>
     <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/y-x2BLPyWGk" title="Directions to KANAKA Kuteera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
